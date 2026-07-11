@@ -6,10 +6,9 @@ An end-to-end sales forecasting and demand intelligence system built on four yea
 
 ## 🔗 Live Demo
 
-**Streamlit Dashboard:** [Add your deployed Streamlit Cloud link here]
+**Streamlit Dashboard:** https://superstore-demand-radar-svczmby8rqlmlhrn48xvcu.streamlit.app/
 
-**Notebook (Colab):** [Add your Google Colab link here]
-
+**Notebook (Colab):** https://colab.research.google.com/drive/1G34xKYt5WmecpzgwZ0R9D6cApcfiPq5L?usp=sharing
 ---
 
 ## 📁 Repository Structure
