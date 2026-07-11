@@ -1,6 +1,4 @@
-# ==============================================================================
 # TASK 7: STREAMLIT ENTERPRISE UNIVERSAL-THEME MULTIPAGE DASHBOARD (app.py)
-# ==============================================================================
 import os
 import streamlit as st
 import pandas as pd
@@ -75,9 +73,7 @@ page = st.sidebar.radio(
 
 UNIVERSAL_TEMPLATE = "plotly"
 
-# ==============================================================================
 # PAGE 1: SALES OVERVIEW DASHBOARD MODULE
-# ==============================================================================
 if page == "Sales Overview":
     st.title("Sales Overview")
     st.caption("Annual and monthly sales trends, filterable by category and region.")
@@ -116,9 +112,7 @@ if page == "Sales Overview":
         fig_line.update_traces(line=dict(color='#FFC107', width=3), mode='lines+markers')
         st.plotly_chart(fig_line, width="stretch")
 
-# ==============================================================================
 # PAGE 2: FORECAST EXPLORER MODULE (DARK-THEME FIX ACTIVE)
-# ==============================================================================
 elif page == "Forecast Explorer":
     st.title("Forecast Explorer")
     st.caption("Select a category or region to view its sales forecast and model accuracy.")
@@ -172,7 +166,7 @@ elif page == "Forecast Explorer":
 
         fig_fc = go.Figure()
         
-        # 🎯 FIX: Changed color from 'black' to high-visibility '#29B6F6' (Electric Sky Blue)
+        #  FIX: Changed color from 'black' to high-visibility '#29B6F6' (Electric Sky Blue)
         fig_fc.add_trace(go.Scatter(x=p_input['ds'], y=p_input['y'], name='Historical Sales', line=dict(color='#29B6F6', width=2)))
         
         # Future forecast vector track
@@ -206,9 +200,7 @@ elif page == "Forecast Explorer":
     else:
         st.warning("Not enough historical data in this segment to fit a reliable forecast.")
 
-# ==============================================================================
 # PAGE 3: ANOMALY REPORT MODULE
-# ==============================================================================
 elif page == "Anomaly Report":
     st.title("Anomaly Report")
     st.caption("Weekly sales anomalies flagged by Isolation Forest and rolling Z-Score.")
@@ -262,9 +254,7 @@ elif page == "Anomaly Report":
     else:
         st.info("No anomalies found under the selected method.")
 
-# ==============================================================================
 # PAGE 4: PRODUCT DEMAND SEGMENTS MODULE
-# ==============================================================================
 elif page == "Product Demand Segments":
     st.title("Product Demand Segments")
     st.caption("K-Means clusters of product sub-categories with recommended stocking strategy per cluster.")
